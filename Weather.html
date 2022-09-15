@@ -45,11 +45,18 @@
             outline: none;
             box-shadow: 0px 0px 5px gray;
         }
+        h1{
+            color: white;
+            padding-bottom: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
+        <h1>WEATHER REPORT APPLICATION</h1>
+
         <div class="row" style="text-align:center;">
             <form action="">
                 <input type="search" id="search" placeholder="Search by City Name...">
@@ -98,10 +105,11 @@
             weather.innerHTML = `
         <div>
             <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="">
+            <h4> ${data.weather[0].main} </h4>
+
         </div>
         <div>
             <h2>${data.main.temp} ℃</h2>
-            <h4> ${data.weather[0].main} </h4>
         </div>
         <div>
             <h2>${data.main.humidity} RH</h2>
